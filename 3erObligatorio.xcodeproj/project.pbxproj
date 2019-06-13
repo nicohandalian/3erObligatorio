@@ -12,6 +12,7 @@
 		0337EC5222B30DF40045F886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5022B30DF40045F886 /* Main.storyboard */; };
 		0337EC5422B30DF50045F886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5322B30DF50045F886 /* Assets.xcassets */; };
 		0337EC5722B30DF50045F886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5522B30DF50045F886 /* LaunchScreen.storyboard */; };
+		B14B0CD563609F86C6BA37EE /* Pods_3erObligatorio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD7599EB3B575E569E5DDA5 /* Pods_3erObligatorio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0337EC5322B30DF50045F886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0337EC5622B30DF50045F886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0337EC5822B30DF50045F886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E64A37F9619ADDD38755B25 /* Pods-3erObligatorio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3erObligatorio.release.xcconfig"; path = "Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio.release.xcconfig"; sourceTree = "<group>"; };
+		3BD7599EB3B575E569E5DDA5 /* Pods_3erObligatorio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3erObligatorio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFEE92C4F9297D40C2A088ED /* Pods-3erObligatorio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3erObligatorio.debug.xcconfig"; path = "Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B14B0CD563609F86C6BA37EE /* Pods_3erObligatorio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				0337EC4B22B30DF40045F886 /* 3erObligatorio */,
 				0337EC4A22B30DF40045F886 /* Products */,
+				405DD3CCC2CD25AD143CBE7C /* Pods */,
+				95D0941881082BB21607B6F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = 3erObligatorio;
 			sourceTree = "<group>";
 		};
+		405DD3CCC2CD25AD143CBE7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE92C4F9297D40C2A088ED /* Pods-3erObligatorio.debug.xcconfig */,
+				0E64A37F9619ADDD38755B25 /* Pods-3erObligatorio.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		95D0941881082BB21607B6F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7599EB3B575E569E5DDA5 /* Pods_3erObligatorio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0337EC5B22B30DF50045F886 /* Build configuration list for PBXNativeTarget "3erObligatorio" */;
 			buildPhases = (
+				4D6022298B18BA6DDE3B7893 /* [CP] Check Pods Manifest.lock */,
 				0337EC4522B30DF40045F886 /* Sources */,
 				0337EC4622B30DF40045F886 /* Frameworks */,
 				0337EC4722B30DF40045F886 /* Resources */,
+				1EA0197CA098CC2463A1BAA8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EA0197CA098CC2463A1BAA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D6022298B18BA6DDE3B7893 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-3erObligatorio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0337EC4522B30DF40045F886 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		0337EC5C22B30DF50045F886 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFEE92C4F9297D40C2A088ED /* Pods-3erObligatorio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +367,7 @@
 		};
 		0337EC5D22B30DF50045F886 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E64A37F9619ADDD38755B25 /* Pods-3erObligatorio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
