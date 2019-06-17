@@ -12,6 +12,8 @@
 		0337EC5222B30DF40045F886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5022B30DF40045F886 /* Main.storyboard */; };
 		0337EC5422B30DF50045F886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5322B30DF50045F886 /* Assets.xcassets */; };
 		0337EC5722B30DF50045F886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5522B30DF50045F886 /* LaunchScreen.storyboard */; };
+		03B4F15222B8587D0080210E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B4F15122B8587D0080210E /* Question.swift */; };
+		03B4F15522B858B10080210E /* QuestionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B4F15422B858B10080210E /* QuestionCategory.swift */; };
 		B14B0CD563609F86C6BA37EE /* Pods_3erObligatorio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD7599EB3B575E569E5DDA5 /* Pods_3erObligatorio.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		0337EC5322B30DF50045F886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0337EC5622B30DF50045F886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0337EC5822B30DF50045F886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03B4F15122B8587D0080210E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		03B4F15422B858B10080210E /* QuestionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCategory.swift; sourceTree = "<group>"; };
 		0E64A37F9619ADDD38755B25 /* Pods-3erObligatorio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3erObligatorio.release.xcconfig"; path = "Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio.release.xcconfig"; sourceTree = "<group>"; };
 		3BD7599EB3B575E569E5DDA5 /* Pods_3erObligatorio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3erObligatorio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE92C4F9297D40C2A088ED /* Pods-3erObligatorio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3erObligatorio.debug.xcconfig"; path = "Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		03B4F14E22B857830080210E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03B4F15122B8587D0080210E /* Question.swift */,
+				03B4F15422B858B10080210E /* QuestionCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,8 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B4F15222B8587D0080210E /* Question.swift in Sources */,
 				0337EC4F22B30DF40045F886 /* ViewController.swift in Sources */,
 				0337EC4D22B30DF40045F886 /* AppDelegate.swift in Sources */,
+				03B4F15522B858B10080210E /* QuestionCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
