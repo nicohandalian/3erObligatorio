@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -61,14 +61,38 @@
 		0337EC4B22B30DF40045F886 /* 3erObligatorio */ = {
 			isa = PBXGroup;
 			children = (
-				0337EC4C22B30DF40045F886 /* AppDelegate.swift */,
-				0337EC4E22B30DF40045F886 /* ViewController.swift */,
-				0337EC5022B30DF40045F886 /* Main.storyboard */,
-				0337EC5322B30DF50045F886 /* Assets.xcassets */,
-				0337EC5522B30DF50045F886 /* LaunchScreen.storyboard */,
 				0337EC5822B30DF50045F886 /* Info.plist */,
+				0337EC5322B30DF50045F886 /* Assets.xcassets */,
+				0337EC4C22B30DF40045F886 /* AppDelegate.swift */,
+				03B4F15022B8578F0080210E /* Controllers */,
+				03B4F14F22B8578A0080210E /* Views */,
+				03B4F14E22B857830080210E /* Models */,
 			);
 			path = 3erObligatorio;
+			sourceTree = "<group>";
+		};
+		03B4F14E22B857830080210E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03B4F14F22B8578A0080210E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0337EC5022B30DF40045F886 /* Main.storyboard */,
+				0337EC5522B30DF50045F886 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03B4F15022B8578F0080210E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0337EC4E22B30DF40045F886 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		405DD3CCC2CD25AD143CBE7C /* Pods */ = {
@@ -77,7 +101,6 @@
 				BFEE92C4F9297D40C2A088ED /* Pods-3erObligatorio.debug.xcconfig */,
 				0E64A37F9619ADDD38755B25 /* Pods-3erObligatorio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
