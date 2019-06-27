@@ -24,8 +24,9 @@ class LevelsManager {
         levelsDifficulty.append((TriviaLevels.seven, QuestionDifficulty.hard))
         levelsDifficulty.append((TriviaLevels.eight, QuestionDifficulty.hard))
     }
-    public nextLevel(){
-        actual++
+    
+    func nextLevel(){
+        actual += 1
     }
     
 }
