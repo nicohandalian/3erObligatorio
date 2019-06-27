@@ -29,4 +29,11 @@ class LevelsManager {
         actual += 1
     }
     
+    func actualLevel() -> TriviaLevels{
+        return levelsDifficulty[actual].0
+    }
+    func actualDifficulty() -> QuestionDifficulty{
+        return levelsDifficulty[actual].1
+    }
+    
 }
