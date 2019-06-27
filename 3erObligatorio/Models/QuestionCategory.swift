@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+enum QuestionCategory {
+    case mythology
+    case sports
+    case computers
+    case films
+    case maths
+    case animals
+}
