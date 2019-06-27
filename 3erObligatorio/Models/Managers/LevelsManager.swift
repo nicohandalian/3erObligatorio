@@ -12,6 +12,7 @@ import Foundation
 class LevelsManager {
     static let shared = LevelsManager()
     var levelsDifficulty: [(TriviaLevels,QuestionDifficulty)] = []
+    var actual = 0
     
     private init() {
         levelsDifficulty.append((TriviaLevels.one, QuestionDifficulty.easy))
@@ -22,6 +23,9 @@ class LevelsManager {
         levelsDifficulty.append((TriviaLevels.six, QuestionDifficulty.medium))
         levelsDifficulty.append((TriviaLevels.seven, QuestionDifficulty.hard))
         levelsDifficulty.append((TriviaLevels.eight, QuestionDifficulty.hard))
+    }
+    public nextLevel(){
+        actual++
     }
     
 }
