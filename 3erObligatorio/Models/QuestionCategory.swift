@@ -14,5 +14,5 @@ enum QuestionCategory {
     case computers
     case films
     case maths
-    case animals
+    case general
 }
