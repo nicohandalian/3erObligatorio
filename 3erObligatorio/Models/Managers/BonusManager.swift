@@ -11,7 +11,7 @@ import Foundation
 
 class BonusManager {
     static let shared = BonusManager()
-    var bonuses: [BonusType: Bool]
+    var bonuses: [BonusType: Bool] = [:]
     
     private init() {
         bonuses[BonusType.callSomeone] = true
