@@ -12,6 +12,7 @@
 		0331A55622C46549008E3CE2 /* BonusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A55522C46549008E3CE2 /* BonusType.swift */; };
 		0331A55822C466D1008E3CE2 /* QuestionDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A55722C466D1008E3CE2 /* QuestionDifficulty.swift */; };
 		0331A55A22C46756008E3CE2 /* TriviaLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A55922C46756008E3CE2 /* TriviaLevels.swift */; };
+		0331A55E22C46855008E3CE2 /* LevelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331A55D22C46855008E3CE2 /* LevelsManager.swift */; };
 		0337EC4D22B30DF40045F886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0337EC4C22B30DF40045F886 /* AppDelegate.swift */; };
 		0337EC4F22B30DF40045F886 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0337EC4E22B30DF40045F886 /* ViewController.swift */; };
 		0337EC5222B30DF40045F886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5022B30DF40045F886 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		0331A55522C46549008E3CE2 /* BonusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusType.swift; sourceTree = "<group>"; };
 		0331A55722C466D1008E3CE2 /* QuestionDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficulty.swift; sourceTree = "<group>"; };
 		0331A55922C46756008E3CE2 /* TriviaLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaLevels.swift; sourceTree = "<group>"; };
+		0331A55D22C46855008E3CE2 /* LevelsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsManager.swift; sourceTree = "<group>"; };
 		0337EC4922B30DF40045F886 /* 3erObligatorio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3erObligatorio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0337EC4C22B30DF40045F886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0337EC4E22B30DF40045F886 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				0331A55122C4645A008E3CE2 /* BonusManager.swift */,
 				0331A55322C46468008E3CE2 /* APIManager.swift */,
+				0331A55D22C46855008E3CE2 /* LevelsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0331A55E22C46855008E3CE2 /* LevelsManager.swift in Sources */,
 				0331A55422C46468008E3CE2 /* APIManager.swift in Sources */,
 				03B4F15222B8587D0080210E /* Question.swift in Sources */,
 				0337EC4F22B30DF40045F886 /* ViewController.swift in Sources */,
