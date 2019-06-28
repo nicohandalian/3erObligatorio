@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum QuestionDifficulty{
-    case easy
-    case medium
-    case hard
+enum QuestionDifficulty:String{
+    case easy = "easy"
+    case medium = "medium"
+    case hard = "hard"
 }

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IndexViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        APIManager.shared.getQuestion(category: QuestionCategory.general, difficulty: .hard)
     }
 
 

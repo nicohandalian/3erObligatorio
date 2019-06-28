@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum QuestionCategory {
-    case mythology
-    case sports
-    case computers
-    case films
-    case maths
-    case general
+enum QuestionCategory:Int {
+    case mythology = 1
+    case sports = 2
+    case computers = 3
+    case films = 4
+    case maths = 5
+    case general = 9
 }
