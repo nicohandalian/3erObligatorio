@@ -9,10 +9,10 @@
 import Foundation
 
 enum QuestionCategory:Int {
-    case mythology = 1
-    case sports = 2
-    case computers = 3
-    case films = 4
-    case maths = 5
+    case mythology = 20
+    case sports = 21
+    case computers = 18
+    case films = 11
+    case maths = 19
     case general = 9
 }

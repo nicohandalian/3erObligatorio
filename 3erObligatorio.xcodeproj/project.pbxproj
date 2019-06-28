@@ -20,6 +20,7 @@
 		0337EC5722B30DF50045F886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0337EC5522B30DF50045F886 /* LaunchScreen.storyboard */; };
 		03612F7D22C5969A00C02308 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03612F7C22C5969A00C02308 /* QuestionViewController.swift */; };
 		03612F7F22C5980100C02308 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03612F7E22C5980100C02308 /* APIResult.swift */; };
+		03612F8122C5A4F000C02308 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03612F8022C5A4F000C02308 /* CategoryManager.swift */; };
 		03B4F15222B8587D0080210E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B4F15122B8587D0080210E /* Question.swift */; };
 		03B4F15522B858B10080210E /* QuestionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B4F15422B858B10080210E /* QuestionCategory.swift */; };
 		B14B0CD563609F86C6BA37EE /* Pods_3erObligatorio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD7599EB3B575E569E5DDA5 /* Pods_3erObligatorio.framework */; };
@@ -41,6 +42,7 @@
 		0337EC5822B30DF50045F886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03612F7C22C5969A00C02308 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		03612F7E22C5980100C02308 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		03612F8022C5A4F000C02308 /* CategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
 		03B4F15122B8587D0080210E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		03B4F15422B858B10080210E /* QuestionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCategory.swift; sourceTree = "<group>"; };
 		0E64A37F9619ADDD38755B25 /* Pods-3erObligatorio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3erObligatorio.release.xcconfig"; path = "Target Support Files/Pods-3erObligatorio/Pods-3erObligatorio.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				0331A55122C4645A008E3CE2 /* BonusManager.swift */,
 				0331A55322C46468008E3CE2 /* APIManager.swift */,
 				0331A55D22C46855008E3CE2 /* LevelsManager.swift */,
+				03612F8022C5A4F000C02308 /* CategoryManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				0331A55A22C46756008E3CE2 /* TriviaLevels.swift in Sources */,
 				0331A55622C46549008E3CE2 /* BonusType.swift in Sources */,
 				0337EC4D22B30DF40045F886 /* AppDelegate.swift in Sources */,
+				03612F8122C5A4F000C02308 /* CategoryManager.swift in Sources */,
 				0331A55822C466D1008E3CE2 /* QuestionDifficulty.swift in Sources */,
 				03B4F15522B858B10080210E /* QuestionCategory.swift in Sources */,
 				03612F7D22C5969A00C02308 /* QuestionViewController.swift in Sources */,
