@@ -24,6 +24,12 @@ class QuestionViewController: UIViewController{
     
     func alterLayout(){
         questionTextView.isUserInteractionEnabled = false
+        questionTextView.layer.cornerRadius = 15
+        questionTextView.translatesAutoresizingMaskIntoConstraints = true
+        option1Button.layer.cornerRadius = 15
+        option2Button.layer.cornerRadius = 15
+        option3Button.layer.cornerRadius = 15
+        option4Button.layer.cornerRadius = 15
     }
     
     func fetchQuestion(){
@@ -43,6 +49,7 @@ class QuestionViewController: UIViewController{
     func updateView(){
         questionTextView.text = question!.question
         questionTextView.sizeToFit()
+        
         let options = shuffleOptions(correct: question!.correct_answer!, incorrects: question!.incorrect_answers!)
         
         option1Button.setTitle(options[0], for:.normal)
