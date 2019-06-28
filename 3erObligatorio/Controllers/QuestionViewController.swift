@@ -17,7 +17,7 @@ class QuestionViewController: UIViewController{
     }
     
     func fetchQuestion(){
-        APIManager.shared.getQuestion(category: QuestionCategory.general, difficulty: LevelsManager.shared.actualDifficulty()){response,error in
+        APIManager.shared.getQuestion(category: CategoryManager.shared.getNextCategory(), difficulty: LevelsManager.shared.actualDifficulty()){response,error in
             if let error = error{
                 let errorAlert = UIAlertController(title: "Failed loading purchases", message: error.localizedDescription, preferredStyle: .alert)
                 errorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

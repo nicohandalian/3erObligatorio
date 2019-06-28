@@ -18,15 +18,15 @@ class CategoryManager {
         let next = Int.random(in: 0...5)
         switch next {
         case 0:
-            return QuestionCategory.computers
+            return QuestionCategory.mythology
         case 1:
-            return QuestionCategory.computers
+            return QuestionCategory.films
         case 2:
-            return QuestionCategory.computers
+            return QuestionCategory.sports
         case 3:
-            return QuestionCategory.computers
+            return QuestionCategory.general
         case 4:
-            return QuestionCategory.computers
+            return QuestionCategory.maths
         case 5:
             return QuestionCategory.computers
         default:
