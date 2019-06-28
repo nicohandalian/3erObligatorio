@@ -11,9 +11,19 @@ import UIKit
 
 class QuestionViewController: UIViewController{
     var question: Question?
+    @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var option1Button: UIButton!
+    @IBOutlet weak var option2Button: UIButton!
+    @IBOutlet weak var option3Button: UIButton!
+    @IBOutlet weak var option4Button: UIButton!
     
     override func viewDidLoad() {
+        alterLayout()
         fetchQuestion()
+    }
+    
+    func alterLayout(){
+        questionTextView.isUserInteractionEnabled = false
     }
     
     func fetchQuestion(){
@@ -25,8 +35,23 @@ class QuestionViewController: UIViewController{
             }
             if let response = response{
                 self.question = response.results![0]
+                self.updateView()
             }
         }
+    }
+    
+    func updateView(){
+        questionTextView.text = question!.question
+        questionTextView.sizeToFit()
+        
+        option1Button.setTitle(question!.correct_answer, for:.normal)
+        
+        option2Button.setTitle(question!.incorrect_answers![0], for:.normal)
+        
+        option3Button.setTitle(question!.incorrect_answers![1], for:.normal)
+        
+        option4Button.setTitle(question!.incorrect_answers![2], for:.normal)
+        
     }
     
 }
