@@ -27,6 +27,8 @@ class QuestionViewController: UIViewController{
     var question: Question?
     var correctOption: Int?
     var options: [String]?
+    var bonusUsed = false
+    var doubleAnswerBonus = false
     
     override func viewDidLoad() {
         alterLayout()
@@ -83,6 +85,22 @@ class QuestionViewController: UIViewController{
         option2Button.isHidden = false
         option3Button.isHidden = false
         option4Button.isHidden = false
+        
+        
+        option1Button.isEnabled = true
+        option1Button.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+        
+        
+        option2Button.isEnabled = true
+        option2Button.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+        
+        
+        option3Button.isEnabled = true
+        option3Button.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+        
+        
+        option4Button.isEnabled = true
+        option4Button.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
     }
     
     func hideElementsInView() {
@@ -158,7 +176,7 @@ class QuestionViewController: UIViewController{
     }
     
     func loserAlert(){
-        let loserAlert = UIAlertController(title: "Wrong Answer :(", message: "The correct answer was: \(options![correctOption!-1])", preferredStyle: .alert)
+        let loserAlert = UIAlertController(title: "Wrong Answer :(", message: "The correct answer was: \(options![correctOption!-1]).", preferredStyle: .alert)
         loserAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: self.indexHandler))
         self.present(loserAlert, animated: true, completion: nil)
         
@@ -175,9 +193,21 @@ class QuestionViewController: UIViewController{
     
     func millionaireAlert(){
         let winnerAlert = UIAlertController(title: "WOOOW!!", message: "You just became millionaire!", preferredStyle: .alert)
-        winnerAlert.addAction(UIAlertAction(title: "Go back", style: .default, handler: self.indexHandler(alert:)))
+        winnerAlert.addAction(UIAlertAction(title: "Go back", style: .default, handler: self.indexHandler))
         winnerAlert.addAction(UIAlertAction(title: "Play again!", style: .default, handler: self.playAgainHandler))
         self.present(winnerAlert, animated: true, completion: nil)
+    }
+    
+    func callSomeoneAlert(){
+        let callSomeoneAlert = UIAlertController(title: "Call Bonus", message: "Your aunt says: 'I'm sure the answer is \(options![correctOption!-1])'.", preferredStyle: .alert)
+        callSomeoneAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(callSomeoneAlert, animated: true, completion: nil)
+    }
+    
+    func alreadyUsedBonus(){
+        let alreadyUsedBonus = UIAlertController(title: "Bonus already used in this turn", message: "You can't use two bonus in one turn", preferredStyle: .alert)
+        alreadyUsedBonus.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alreadyUsedBonus, animated: true, completion: nil)
         
     }
     
@@ -191,15 +221,103 @@ class QuestionViewController: UIViewController{
     func playAgainHandler(alert: UIAlertAction!){
         LevelsManager.shared.newGame()
         BonusManager.shared.newGame()
+        bonusUsed = false
         fetchQuestion()
     }
     
     func nextQuestionHandler(alert: UIAlertAction!){
+        bonusUsed = false
         fetchQuestion()
+    }
+    
+    @IBAction func bonus1Selected(_ sender: Any) {
+        if(!bonusUsed){
+            bonusUsed = true
+            BonusManager.shared.useCallSomeone()
+            bonus1Button.isEnabled = false
+            bonus1Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            callSomeoneAlert()
+            
+        }
+        else{
+            alreadyUsedBonus()
+        }
+    }
+    
+    @IBAction func bonus2Selected(_ sender: Any) {
+        if(!bonusUsed){
+            bonusUsed = true
+            BonusManager.shared.useChangeQuestion()
+            bonus2Button.isEnabled = false
+            bonus2Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            fetchQuestion()
+        }
+        else{
+            alreadyUsedBonus()
+        }
+    }
+    
+    @IBAction func bonus3Selected(_ sender: Any) {
+        if(!bonusUsed){
+            bonusUsed = true
+            BonusManager.shared.useDiscardTwoOptions()
+            bonus3Button.isEnabled = false
+            bonus3Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            switch(correctOption!){
+            case 1:
+                option2Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option2Button.isEnabled = false
+                option3Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option3Button.isEnabled = false
+
+            case 2:
+                option1Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option1Button.isEnabled = false
+                option4Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option4Button.isEnabled = false
+
+            case 3:
+                option2Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option2Button.isEnabled = false
+                option4Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option4Button.isEnabled = false
+
+            case 4:
+                option1Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option1Button.isEnabled = false
+                option3Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option3Button.isEnabled = false
+
+            default:
+                option2Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option2Button.isEnabled = false
+                option3Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                option3Button.isEnabled = false
+
+            }
+        }
+        else{
+            alreadyUsedBonus()
+        }
+        
+    }
+    
+    @IBAction func bonus4Selected(_ sender: Any) {
+        if(!bonusUsed){
+            bonusUsed = true
+            BonusManager.shared.useDoubleAnswer()
+            bonus4Button.isEnabled = false
+            bonus4Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            doubleAnswerBonus = true
+        }
+        else{
+            alreadyUsedBonus()
+        }
     }
     
     @IBAction func option1Selected(_ sender: Any) {
         if(correctOption! == 1){
+            doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
                 millionaireAlert()
             }
@@ -209,11 +327,19 @@ class QuestionViewController: UIViewController{
             }
         }
         else{
-            loserAlert()
+            if(doubleAnswerBonus){
+                doubleAnswerBonus = false
+                option1Button.isEnabled = false
+                option1Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            }else{
+                loserAlert()
+            }
+            
         }
     }
     @IBAction func option2Selected(_ sender: Any) {
         if(correctOption! == 2){
+            doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
                 millionaireAlert()
             }
@@ -223,12 +349,19 @@ class QuestionViewController: UIViewController{
             }
         }
         else{
-            loserAlert()
+            if(doubleAnswerBonus){
+                doubleAnswerBonus = false
+                option2Button.isEnabled = false
+                option2Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            }else{
+                loserAlert()
+            }
             
         }
     }
     @IBAction func option3Selected(_ sender: Any) {
         if(correctOption! == 3){
+            doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
                 millionaireAlert()
             }
@@ -238,12 +371,19 @@ class QuestionViewController: UIViewController{
             }
         }
         else{
-            loserAlert()
+            if(doubleAnswerBonus){
+                doubleAnswerBonus = false
+                option3Button.isEnabled = false
+                option3Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            }else{
+                loserAlert()
+            }
             
         }
     }
     @IBAction func option4Selected(_ sender: Any) {
         if(correctOption! == 4){
+            doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
                 millionaireAlert()
             }
@@ -253,10 +393,14 @@ class QuestionViewController: UIViewController{
             }
         }
         else{
-            loserAlert()
+            if(doubleAnswerBonus){
+                doubleAnswerBonus = false
+                option4Button.isEnabled = false
+                option4Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            }else{
+                loserAlert()
+            }
             
         }
     }
-    
-    
 }

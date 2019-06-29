@@ -45,6 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="849" y="128"/>
         </scene>
         <!--Game Type View Controller-->
         <scene sceneID="Nhj-3C-8UQ">
@@ -252,10 +253,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-Un-coF">
                                 <rect key="frame" x="15" y="79" width="50" height="30"/>
                                 <state key="normal" title="Bonus1"/>
+                                <connections>
+                                    <action selector="bonus1Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="Hvx-8o-BnS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8x-qg-IqL">
                                 <rect key="frame" x="307" y="79" width="53" height="30"/>
                                 <state key="normal" title="Bonus4"/>
+                                <connections>
+                                    <action selector="bonus4Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="jmo-St-6Au"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jab-dc-yL1">
                                 <rect key="frame" x="172.5" y="249" width="30" height="36"/>
@@ -296,10 +303,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-S0-bu9">
                                         <rect key="frame" x="149" y="0.0" width="53" height="30"/>
                                         <state key="normal" title="Bonus3"/>
+                                        <connections>
+                                            <action selector="bonus3Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="F4X-tL-Ld1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFp-Kj-Dh4">
                                         <rect key="frame" x="40" y="0.0" width="52" height="30"/>
                                         <state key="normal" title="Bonus2"/>
+                                        <connections>
+                                            <action selector="bonus2Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="LqP-sy-p9j"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
