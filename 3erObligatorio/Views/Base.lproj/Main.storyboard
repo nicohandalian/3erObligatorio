@@ -251,19 +251,16 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-Un-coF">
-                                <rect key="frame" x="15" y="79" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" image="icon-call">
-                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <rect key="frame" x="25" y="79" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" backgroundImage="icon-call"/>
                                 <connections>
                                     <action selector="bonus1Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="Hvx-8o-BnS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8x-qg-IqL">
-                                <rect key="frame" x="330" y="79" width="30" height="30"/>
-                                <state key="normal" image="icon-double"/>
+                                <rect key="frame" x="320" y="79" width="30" height="30"/>
+                                <state key="normal" backgroundImage="icon-double"/>
                                 <connections>
                                     <action selector="bonus4Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="jmo-St-6Au"/>
                                 </connections>
@@ -302,18 +299,18 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3q2-Pg-qVR">
-                                <rect key="frame" x="45" y="79" width="285" height="30"/>
+                                <rect key="frame" x="55" y="79" width="265" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-S0-bu9">
-                                        <rect key="frame" x="195" y="0.0" width="30" height="30"/>
-                                        <state key="normal" image="icon-two"/>
+                                        <rect key="frame" x="175" y="0.0" width="30" height="30"/>
+                                        <state key="normal" backgroundImage="icon-two"/>
                                         <connections>
                                             <action selector="bonus3Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="F4X-tL-Ld1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFp-Kj-Dh4">
                                         <rect key="frame" x="60" y="0.0" width="30" height="30"/>
-                                        <state key="normal" image="icon-change"/>
+                                        <state key="normal" backgroundImage="icon-change"/>
                                         <connections>
                                             <action selector="bonus2Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="LqP-sy-p9j"/>
                                         </connections>
@@ -369,7 +366,7 @@
                             <constraint firstItem="3q2-Pg-qVR" firstAttribute="top" secondItem="bMp-Un-coF" secondAttribute="top" id="NAt-Nx-Gfn"/>
                             <constraint firstItem="bMp-Un-coF" firstAttribute="top" secondItem="A61-S7-Vjd" secondAttribute="top" constant="15" id="NMj-TD-hcl"/>
                             <constraint firstItem="jab-dc-yL1" firstAttribute="centerX" secondItem="A61-S7-Vjd" secondAttribute="centerX" id="OM4-z1-J09"/>
-                            <constraint firstItem="A61-S7-Vjd" firstAttribute="trailing" secondItem="Z8x-qg-IqL" secondAttribute="trailing" constant="15" id="TqN-mA-45Z"/>
+                            <constraint firstItem="A61-S7-Vjd" firstAttribute="trailing" secondItem="Z8x-qg-IqL" secondAttribute="trailing" constant="25" id="TqN-mA-45Z"/>
                             <constraint firstItem="nwn-S0-bu9" firstAttribute="centerY" secondItem="Z8x-qg-IqL" secondAttribute="centerY" id="UId-Xp-Xg8"/>
                             <constraint firstItem="GJ4-MA-KUJ" firstAttribute="centerX" secondItem="A61-S7-Vjd" secondAttribute="centerX" id="WqF-pi-b1e"/>
                             <constraint firstItem="3q2-Pg-qVR" firstAttribute="trailing" secondItem="Z8x-qg-IqL" secondAttribute="leading" id="Z5a-TT-ANx"/>
@@ -381,7 +378,7 @@
                             <constraint firstItem="idr-Ug-ivl" firstAttribute="centerX" secondItem="A61-S7-Vjd" secondAttribute="centerX" id="cPb-pi-kRH"/>
                             <constraint firstItem="iFp-Kj-Dh4" firstAttribute="centerY" secondItem="bMp-Un-coF" secondAttribute="centerY" id="dTD-Xl-0qc"/>
                             <constraint firstItem="A61-S7-Vjd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4sN-TN-CnT" secondAttribute="trailing" constant="15" id="dbj-f2-oZF"/>
-                            <constraint firstItem="bMp-Un-coF" firstAttribute="leading" secondItem="A61-S7-Vjd" secondAttribute="leading" constant="15" id="g6h-GB-QtP"/>
+                            <constraint firstItem="bMp-Un-coF" firstAttribute="leading" secondItem="A61-S7-Vjd" secondAttribute="leading" constant="25" id="g6h-GB-QtP"/>
                             <constraint firstItem="GJ4-MA-KUJ" firstAttribute="top" secondItem="3q2-Pg-qVR" secondAttribute="bottom" constant="30" id="mVP-UM-a2u"/>
                             <constraint firstItem="A61-S7-Vjd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="idr-Ug-ivl" secondAttribute="trailing" constant="15" id="n0P-OX-usu"/>
                             <constraint firstItem="4sN-TN-CnT" firstAttribute="centerX" secondItem="A61-S7-Vjd" secondAttribute="centerX" id="nBR-DC-cZV"/>

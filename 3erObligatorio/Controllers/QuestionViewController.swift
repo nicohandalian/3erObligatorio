@@ -49,6 +49,11 @@ class QuestionViewController: UIViewController{
         option3Button.layer.cornerRadius = 15
         option4Button.layer.cornerRadius = 15
         
+        bonus1Button.setBackgroundImage(UIImage(named: "icon-call"), for: .normal)
+        bonus2Button.setBackgroundImage(UIImage(named: "icon-change"), for: .normal)
+        bonus3Button.setBackgroundImage(UIImage(named: "icon-two"), for: .normal)
+        bonus4Button.setBackgroundImage(UIImage(named: "icon-double"), for: .normal)
+        
     }
     
     func fetchQuestion(){
@@ -221,6 +226,17 @@ class QuestionViewController: UIViewController{
     func playAgainHandler(alert: UIAlertAction!){
         LevelsManager.shared.newGame()
         BonusManager.shared.newGame()
+        
+        bonus1Button.setBackgroundImage(UIImage(named: "icon-call"), for: .normal)
+        bonus2Button.setBackgroundImage(UIImage(named: "icon-change"), for: .normal)
+        bonus3Button.setBackgroundImage(UIImage(named: "icon-two"), for: .normal)
+        bonus4Button.setBackgroundImage(UIImage(named: "icon-double"), for: .normal)
+        
+        bonus1Button.isEnabled = true
+        bonus2Button.isEnabled = true
+        bonus3Button.isEnabled = true
+        bonus4Button.isEnabled = true
+        
         bonusUsed = false
         fetchQuestion()
     }
