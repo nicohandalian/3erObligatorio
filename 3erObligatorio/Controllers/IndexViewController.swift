@@ -6,6 +6,7 @@
 //  Copyright © 2019 Nicolás Handalian. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class IndexViewController: UIViewController {

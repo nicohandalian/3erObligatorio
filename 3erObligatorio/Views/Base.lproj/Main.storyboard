@@ -49,7 +49,7 @@
         <!--Game Type View Controller-->
         <scene sceneID="Nhj-3C-8UQ">
             <objects>
-                <viewController id="0ZW-M1-uWw" userLabel="Game Type View Controller" sceneMemberID="viewController">
+                <viewController id="0ZW-M1-uWw" userLabel="Game Type View Controller" customClass="GameTypeViewController" customModule="_erObligatorio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J6t-WV-14X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +73,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="classicGameSelected:" destination="0ZW-M1-uWw" eventType="touchUpInside" id="ZBE-7Z-Gte"/>
                                     <segue destination="L4e-to-izf" kind="show" id="FH0-SZ-nee"/>
                                 </connections>
                             </button>
@@ -88,6 +89,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OYB-Nn-TFe"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryGameButton" destination="VjZ-gj-8QH" id="ULE-Hh-wom"/>
+                        <outlet property="classicGameButton" destination="1Q1-Lt-CfU" id="1C0-fC-35r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnL-8y-jia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

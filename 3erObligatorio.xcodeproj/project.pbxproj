@@ -136,8 +136,8 @@
 			children = (
 				0337EC4E22B30DF40045F886 /* IndexViewController.swift */,
 				03612F7C22C5969A00C02308 /* QuestionViewController.swift */,
-				03F72A5322C6F87B00BF2F28 /* CategoriesViewController.swift */,
 				03F72A5522C6F89300BF2F28 /* GameTypeViewController.swift */,
+				03F72A5322C6F87B00BF2F28 /* CategoriesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
