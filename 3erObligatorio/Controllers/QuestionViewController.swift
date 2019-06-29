@@ -183,7 +183,7 @@ class QuestionViewController: UIViewController{
     }
     
     func winnerAlert(){
-        let winnerAlert = UIAlertController(title: "Congratulations!!", message: "Do you want to leave with \(LevelsManager.shared.actualLevel().rawValue) or keep going for \(LevelsManager.shared.nextLevel().rawValue)?", preferredStyle: .alert)
+        let winnerAlert = UIAlertController(title: "Well done!!", message: "Do you want to leave with \(LevelsManager.shared.actualLevel().rawValue) or keep going for \(LevelsManager.shared.nextLevel().rawValue)?", preferredStyle: .alert)
         winnerAlert.addAction(UIAlertAction(title: "Leave :(", style: .default, handler: self.indexHandler))
         winnerAlert.addAction(UIAlertAction(title: "Continue :)", style: .default, handler: self.nextQuestionHandler))
         self.present(winnerAlert, animated: true, completion: nil)
@@ -192,7 +192,7 @@ class QuestionViewController: UIViewController{
     
     
     func millionaireAlert(){
-        let winnerAlert = UIAlertController(title: "WOOOW!!", message: "You just became millionaire!", preferredStyle: .alert)
+        let winnerAlert = UIAlertController(title: "WOOOOOW!!!", message: "You just became millionaire!", preferredStyle: .alert)
         winnerAlert.addAction(UIAlertAction(title: "Go back", style: .default, handler: self.indexHandler))
         winnerAlert.addAction(UIAlertAction(title: "Play again!", style: .default, handler: self.playAgainHandler))
         self.present(winnerAlert, animated: true, completion: nil)
@@ -235,7 +235,7 @@ class QuestionViewController: UIViewController{
             bonusUsed = true
             BonusManager.shared.useCallSomeone()
             bonus1Button.isEnabled = false
-            bonus1Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            bonus1Button.setBackgroundImage(UIImage(named: "icon-call-used"), for: .normal)
             callSomeoneAlert()
             
         }
@@ -249,7 +249,7 @@ class QuestionViewController: UIViewController{
             bonusUsed = true
             BonusManager.shared.useChangeQuestion()
             bonus2Button.isEnabled = false
-            bonus2Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            bonus2Button.setBackgroundImage(UIImage(named: "icon-change-used"), for: .normal)
             fetchQuestion()
         }
         else{
@@ -262,7 +262,7 @@ class QuestionViewController: UIViewController{
             bonusUsed = true
             BonusManager.shared.useDiscardTwoOptions()
             bonus3Button.isEnabled = false
-            bonus3Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            bonus3Button.setBackgroundImage(UIImage(named: "icon-two-used"), for: .normal)
             switch(correctOption!){
             case 1:
                 option2Button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -307,7 +307,7 @@ class QuestionViewController: UIViewController{
             bonusUsed = true
             BonusManager.shared.useDoubleAnswer()
             bonus4Button.isEnabled = false
-            bonus4Button.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            bonus4Button.setBackgroundImage(UIImage(named: "icon-double-used"), for: .normal)
             doubleAnswerBonus = true
         }
         else{
