@@ -94,6 +94,9 @@
                                 <state key="normal" title="A">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="option1Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="plG-qY-Vhk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sN-TN-CnT">
                                 <rect key="frame" x="16" y="295" width="30" height="36"/>
@@ -102,6 +105,9 @@
                                 <state key="normal" title="B">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="option2Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="8lQ-Sk-8yS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P1-mq-LWC">
                                 <rect key="frame" x="16" y="351" width="30" height="36"/>
@@ -110,6 +116,9 @@
                                 <state key="normal" title="C">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="option3Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="x3e-3C-3ny"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fwk-Cp-9xg" userLabel="Level Collection View">
                                 <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
@@ -157,6 +166,9 @@
                                 <state key="normal" title="D">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="option4Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="aqo-kI-WCc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ0-Mo-OBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="27"/>
+            <point key="canvasLocation" x="3282" y="78"/>
         </scene>
     </scenes>
 </document>
