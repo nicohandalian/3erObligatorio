@@ -26,7 +26,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="L4e-to-izf" kind="show" id="MMj-Nt-RyL"/>
+                                    <segue destination="0ZW-M1-uWw" kind="show" id="XUz-fP-k9M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,6 +45,156 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Game Type View Controller-->
+        <scene sceneID="Nhj-3C-8UQ">
+            <objects>
+                <viewController id="0ZW-M1-uWw" userLabel="Game Type View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J6t-WV-14X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjZ-gj-8QH">
+                                <rect key="frame" x="56.5" y="448.5" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Category">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ri6-8H-Rff" kind="show" id="rge-cr-Wz6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q1-Lt-CfU">
+                                <rect key="frame" x="56.5" y="193" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Classic">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L4e-to-izf" kind="show" id="FH0-SZ-nee"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Q1-Lt-CfU" firstAttribute="centerY" secondItem="OYB-Nn-TFe" secondAttribute="centerY" multiplier="0.6" id="1vN-aZ-zL1"/>
+                            <constraint firstItem="VjZ-gj-8QH" firstAttribute="width" secondItem="J6t-WV-14X" secondAttribute="width" multiplier="0.7" id="6Fy-g4-mBe"/>
+                            <constraint firstItem="1Q1-Lt-CfU" firstAttribute="width" secondItem="VjZ-gj-8QH" secondAttribute="width" id="A2h-83-MXO"/>
+                            <constraint firstItem="VjZ-gj-8QH" firstAttribute="centerX" secondItem="OYB-Nn-TFe" secondAttribute="centerX" id="Cca-tI-o1w"/>
+                            <constraint firstItem="VjZ-gj-8QH" firstAttribute="centerY" secondItem="OYB-Nn-TFe" secondAttribute="centerY" multiplier="1.3" id="MBL-RF-5sG"/>
+                            <constraint firstItem="1Q1-Lt-CfU" firstAttribute="centerX" secondItem="OYB-Nn-TFe" secondAttribute="centerX" id="O6h-n3-dpI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OYB-Nn-TFe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnL-8y-jia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669" y="129"/>
+        </scene>
+        <!--Categories View Controller-->
+        <scene sceneID="nlx-qU-AEQ">
+            <objects>
+                <viewController id="Ri6-8H-Rff" userLabel="Categories View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dfy-dp-ykL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-dw-4b7">
+                                <rect key="frame" x="56.5" y="83" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Sports">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L4e-to-izf" kind="show" id="Dh8-0c-bUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpI-TT-fpp">
+                                <rect key="frame" x="56.5" y="174.5" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Computers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L4e-to-izf" kind="show" id="n1i-U1-AlU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-rI-FpL">
+                                <rect key="frame" x="56.5" y="284" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Mythology">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L4e-to-izf" kind="show" id="qk9-DR-a04"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNW-H3-zqh">
+                                <rect key="frame" x="56.5" y="394" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Films">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L4e-to-izf" kind="show" id="x62-tv-bqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD8-yK-Vjt">
+                                <rect key="frame" x="56.5" y="503.5" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Maths">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L4e-to-izf" kind="show" id="BQe-PI-WXT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwI-FA-mZL">
+                                <rect key="frame" x="56.5" y="595" width="262.5" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="General">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L4e-to-izf" kind="show" id="l5H-uj-4Oa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hLI-dw-4b7" firstAttribute="width" secondItem="Dfy-dp-ykL" secondAttribute="width" multiplier="0.7" id="4yl-rj-UXh"/>
+                            <constraint firstItem="VpI-TT-fpp" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="5hI-ep-DGy"/>
+                            <constraint firstItem="VpI-TT-fpp" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.55" id="CVv-K9-10F"/>
+                            <constraint firstItem="KwI-FA-mZL" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="DBq-IY-Bta"/>
+                            <constraint firstItem="Q2p-rI-FpL" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="PNd-fy-bsP"/>
+                            <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="S77-vd-9w4"/>
+                            <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.45" id="TdV-vM-58n"/>
+                            <constraint firstItem="Q2p-rI-FpL" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.85" id="US6-dE-rHz"/>
+                            <constraint firstItem="hLI-dw-4b7" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.3" id="W1s-rb-04L"/>
+                            <constraint firstItem="VpI-TT-fpp" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="YDV-E6-CZ0"/>
+                            <constraint firstItem="hLI-dw-4b7" firstAttribute="centerX" secondItem="2aO-bW-0Kx" secondAttribute="centerX" id="Ylp-7h-b7U"/>
+                            <constraint firstItem="MNW-H3-zqh" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.15" id="bu1-yr-01W"/>
+                            <constraint firstItem="MNW-H3-zqh" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="cKV-90-5wa"/>
+                            <constraint firstItem="KwI-FA-mZL" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.7" id="gGy-VK-DDU"/>
+                            <constraint firstItem="fD8-yK-Vjt" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="sU1-2i-4IZ"/>
+                            <constraint firstItem="KwI-FA-mZL" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="t9A-Ps-jma"/>
+                            <constraint firstItem="MNW-H3-zqh" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="tYq-UH-4xp"/>
+                            <constraint firstItem="Q2p-rI-FpL" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="yNr-rN-sfL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2aO-bW-0Kx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6K0-wO-9im" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452" y="908"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Bi-KJ-fgd">
@@ -221,4 +371,7 @@
             <point key="canvasLocation" x="3280.8000000000002" y="77.811094452773617"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FH0-SZ-nee"/>
+    </inferredMetricsTieBreakers>
 </document>
