@@ -25,15 +25,25 @@ class LevelsManager {
         levelsDifficulty.append((TriviaLevels.eight, QuestionDifficulty.hard))
     }
     
-    func nextLevel(){
+    func progress(){
         actual += 1
     }
     
     func actualLevel() -> TriviaLevels{
         return levelsDifficulty[actual].0
     }
+    
+    
+    func nextLevel() -> TriviaLevels{
+        return levelsDifficulty[actual+1].0
+    }
+    
     func actualDifficulty() -> QuestionDifficulty{
         return levelsDifficulty[actual].1
+    }
+    
+    func newGame(){
+        actual = 0
     }
     
 }

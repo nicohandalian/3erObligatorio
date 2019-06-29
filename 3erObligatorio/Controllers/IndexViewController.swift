@@ -16,6 +16,11 @@ class IndexViewController: UIViewController {
         super.viewDidLoad()
         alterLayout()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        LevelsManager.shared.newGame()
+        BonusManager.shared.newGame()
+    }
     func alterLayout(){
         newGameButton.layer.cornerRadius = 15
     }

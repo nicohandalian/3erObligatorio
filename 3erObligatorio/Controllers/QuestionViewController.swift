@@ -12,6 +12,7 @@ import UIKit
 class QuestionViewController: UIViewController{
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var LevelLabel: UILabel!
     
     @IBOutlet weak var bonus1Button: UIButton!
     @IBOutlet weak var bonus2Button: UIButton!
@@ -45,9 +46,11 @@ class QuestionViewController: UIViewController{
         option2Button.layer.cornerRadius = 15
         option3Button.layer.cornerRadius = 15
         option4Button.layer.cornerRadius = 15
+        
     }
     
     func fetchQuestion(){
+        LevelLabel.text! = "$" + LevelsManager.shared.actualLevel().rawValue
         hideElementsInView()
         activityIndicator.startAnimating()
         APIManager.shared.getQuestion(category: CategoryManager.shared.getNextCategory(), difficulty: LevelsManager.shared.actualDifficulty()){response,error in
@@ -161,14 +164,49 @@ class QuestionViewController: UIViewController{
         
     }
     
+    func winnerAlert(){
+        let winnerAlert = UIAlertController(title: "Congratulations!!", message: "Do you want to leave with \(LevelsManager.shared.actualLevel().rawValue) or keep going for \(LevelsManager.shared.nextLevel().rawValue)", preferredStyle: .alert)
+        winnerAlert.addAction(UIAlertAction(title: "Leave :(", style: .default, handler: self.indexHandler))
+        winnerAlert.addAction(UIAlertAction(title: "Continue :)", style: .default, handler: self.nextQuestionHandler))
+        self.present(winnerAlert, animated: true, completion: nil)
+        
+    }
+    
+    
+    func millionaireAlert(){
+        let winnerAlert = UIAlertController(title: "WOOOW!!", message: "You just became millionaire!", preferredStyle: .alert)
+        winnerAlert.addAction(UIAlertAction(title: "Go back", style: .default, handler: self.indexHandler(alert:)))
+        winnerAlert.addAction(UIAlertAction(title: "Play again!", style: .default, handler: self.playAgainHandler))
+        self.present(winnerAlert, animated: true, completion: nil)
+        
+    }
+    
     func indexHandler(alert: UIAlertAction!){
+        LevelsManager.shared.newGame()
+        BonusManager.shared.newGame()
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    func playAgainHandler(alert: UIAlertAction!){
+        LevelsManager.shared.newGame()
+        BonusManager.shared.newGame()
+        fetchQuestion()
+    }
+    
+    func nextQuestionHandler(alert: UIAlertAction!){
+        fetchQuestion()
     }
     
     @IBAction func option1Selected(_ sender: Any) {
         if(correctOption! == 1){
-            LevelsManager.shared.nextLevel()
-            
+            if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                millionaireAlert()
+            }
+            else{
+                winnerAlert()
+                LevelsManager.shared.progress()
+            }
         }
         else{
             loserAlert()
@@ -176,8 +214,13 @@ class QuestionViewController: UIViewController{
     }
     @IBAction func option2Selected(_ sender: Any) {
         if(correctOption! == 2){
-            LevelsManager.shared.nextLevel()
-            
+            if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                millionaireAlert()
+            }
+            else{
+                winnerAlert()
+                LevelsManager.shared.progress()
+            }
         }
         else{
             loserAlert()
@@ -186,8 +229,13 @@ class QuestionViewController: UIViewController{
     }
     @IBAction func option3Selected(_ sender: Any) {
         if(correctOption! == 3){
-            LevelsManager.shared.nextLevel()
-            
+            if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                millionaireAlert()
+            }
+            else{
+                winnerAlert()
+                LevelsManager.shared.progress()
+            }
         }
         else{
             loserAlert()
@@ -196,8 +244,13 @@ class QuestionViewController: UIViewController{
     }
     @IBAction func option4Selected(_ sender: Any) {
         if(correctOption! == 4){
-            LevelsManager.shared.nextLevel()
-            
+            if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                millionaireAlert()
+            }
+            else{
+                winnerAlert()
+                LevelsManager.shared.progress()
+            }
         }
         else{
             loserAlert()

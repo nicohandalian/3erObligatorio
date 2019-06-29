@@ -11,13 +11,30 @@ import Foundation
 
 class BonusManager {
     static let shared = BonusManager()
-    var bonuses: [BonusType: Bool] = [:]
+    var bonusesAvailable: [BonusType: Bool] = [:]
     
     private init() {
-        bonuses[BonusType.callSomeone] = true
-        bonuses[BonusType.changeQuestion] = true
-        bonuses[BonusType.discardTwoOptions] = true
-        bonuses[BonusType.doubleAnswer] = true
+    }
+    
+    func newGame(){
+        bonusesAvailable[BonusType.callSomeone] = true
+        bonusesAvailable[BonusType.changeQuestion] = true
+        bonusesAvailable[BonusType.discardTwoOptions] = true
+        bonusesAvailable[BonusType.doubleAnswer] = true
+        
+    }
+    
+    func useCallSomeone(){
+        bonusesAvailable[BonusType.callSomeone] = false
+    }
+    func useChangeQuestion(){
+        bonusesAvailable[BonusType.changeQuestion] = false
+    }
+    func useDiscardTwoOptions(){
+        bonusesAvailable[BonusType.discardTwoOptions] = false
+    }
+    func useDoubleAnswer(){
+        bonusesAvailable[BonusType.doubleAnswer] = false
     }
     
 }
