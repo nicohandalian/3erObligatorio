@@ -10,12 +10,20 @@ import Foundation
 import UIKit
 
 class QuestionViewController: UIViewController{
-    var question: Question?
     @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var bonus1Button: UIButton!
+    @IBOutlet weak var bonus2Button: UIButton!
+    @IBOutlet weak var bonus3Button: UIButton!
+    @IBOutlet weak var bonus4Button: UIButton!
+    
     @IBOutlet weak var option1Button: UIButton!
     @IBOutlet weak var option2Button: UIButton!
     @IBOutlet weak var option3Button: UIButton!
     @IBOutlet weak var option4Button: UIButton!
+    
+    var question: Question?
     var correctOption: Int?
     var options: [String]?
     
@@ -28,6 +36,11 @@ class QuestionViewController: UIViewController{
         questionTextView.isUserInteractionEnabled = false
         questionTextView.layer.cornerRadius = 15
         questionTextView.translatesAutoresizingMaskIntoConstraints = true
+        
+        activityIndicator.transform = CGAffineTransform(scaleX: 3.5, y: 3.5)
+        activityIndicator.color = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        activityIndicator.hidesWhenStopped = true
+        
         option1Button.layer.cornerRadius = 15
         option2Button.layer.cornerRadius = 15
         option3Button.layer.cornerRadius = 15
@@ -35,7 +48,13 @@ class QuestionViewController: UIViewController{
     }
     
     func fetchQuestion(){
+        hideElementsInView()
+        activityIndicator.startAnimating()
         APIManager.shared.getQuestion(category: CategoryManager.shared.getNextCategory(), difficulty: LevelsManager.shared.actualDifficulty()){response,error in
+            
+            self.activityIndicator.stopAnimating()
+            self.showElementsInView()
+            
             if let error = error{
                 let errorAlert = UIAlertController(title: "Failed loading purchases", message: error.localizedDescription, preferredStyle: .alert)
                 errorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -46,6 +65,35 @@ class QuestionViewController: UIViewController{
                 self.updateView()
             }
         }
+    }
+    
+    
+    func showElementsInView() {
+        questionTextView.isHidden = false
+        
+        bonus1Button.isHidden = false
+        bonus2Button.isHidden = false
+        bonus3Button.isHidden = false
+        bonus4Button.isHidden = false
+        
+        option1Button.isHidden = false
+        option2Button.isHidden = false
+        option3Button.isHidden = false
+        option4Button.isHidden = false
+    }
+    
+    func hideElementsInView() {
+        questionTextView.isHidden = true
+        
+        bonus1Button.isHidden = true
+        bonus2Button.isHidden = true
+        bonus3Button.isHidden = true
+        bonus4Button.isHidden = true
+        
+        option1Button.isHidden = true
+        option2Button.isHidden = true
+        option3Button.isHidden = true
+        option4Button.isHidden = true
     }
     
     func updateView(){
@@ -107,7 +155,7 @@ class QuestionViewController: UIViewController{
     }
     
     func loserAlert(){
-        let loserAlert = UIAlertController(title: "Wrong Answer :(", message: "The correct answer was: \(options![correctOption!])", preferredStyle: .alert)
+        let loserAlert = UIAlertController(title: "Wrong Answer :(", message: "The correct answer was: \(options![correctOption!-1])", preferredStyle: .alert)
         loserAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: self.indexHandler))
         self.present(loserAlert, animated: true, completion: nil)
         
@@ -119,6 +167,7 @@ class QuestionViewController: UIViewController{
     
     @IBAction func option1Selected(_ sender: Any) {
         if(correctOption! == 1){
+            LevelsManager.shared.nextLevel()
             
         }
         else{
@@ -127,6 +176,7 @@ class QuestionViewController: UIViewController{
     }
     @IBAction func option2Selected(_ sender: Any) {
         if(correctOption! == 2){
+            LevelsManager.shared.nextLevel()
             
         }
         else{
@@ -136,6 +186,7 @@ class QuestionViewController: UIViewController{
     }
     @IBAction func option3Selected(_ sender: Any) {
         if(correctOption! == 3){
+            LevelsManager.shared.nextLevel()
             
         }
         else{
@@ -145,6 +196,7 @@ class QuestionViewController: UIViewController{
     }
     @IBAction func option4Selected(_ sender: Any) {
         if(correctOption! == 4){
+            LevelsManager.shared.nextLevel()
             
         }
         else{

@@ -170,6 +170,9 @@
                                     <action selector="option4Selected:" destination="L4e-to-izf" eventType="touchUpInside" id="aqo-kI-WCc"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="B9b-v0-hhz">
+                                <rect key="frame" x="177.5" y="355.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -185,6 +188,7 @@
                             <constraint firstItem="nwn-S0-bu9" firstAttribute="centerY" secondItem="Z8x-qg-IqL" secondAttribute="centerY" id="UId-Xp-Xg8"/>
                             <constraint firstItem="GJ4-MA-KUJ" firstAttribute="centerX" secondItem="A61-S7-Vjd" secondAttribute="centerX" id="WqF-pi-b1e"/>
                             <constraint firstItem="3q2-Pg-qVR" firstAttribute="trailing" secondItem="Z8x-qg-IqL" secondAttribute="leading" id="Z5a-TT-ANx"/>
+                            <constraint firstItem="B9b-v0-hhz" firstAttribute="centerX" secondItem="A61-S7-Vjd" secondAttribute="centerX" id="aQf-gd-M6k"/>
                             <constraint firstItem="3q2-Pg-qVR" firstAttribute="bottom" secondItem="bMp-Un-coF" secondAttribute="bottom" id="apr-lj-3jq"/>
                             <constraint firstItem="3q2-Pg-qVR" firstAttribute="leading" secondItem="bMp-Un-coF" secondAttribute="trailing" id="bLl-Nv-tbi"/>
                             <constraint firstItem="4sN-TN-CnT" firstAttribute="leading" secondItem="jab-dc-yL1" secondAttribute="leading" id="brj-rP-fmP"/>
@@ -196,6 +200,7 @@
                             <constraint firstItem="GJ4-MA-KUJ" firstAttribute="top" secondItem="3q2-Pg-qVR" secondAttribute="bottom" constant="30" id="mVP-UM-a2u"/>
                             <constraint firstItem="GJ4-MA-KUJ" firstAttribute="leading" secondItem="A61-S7-Vjd" secondAttribute="leading" constant="16" id="oMf-QH-Nxh"/>
                             <constraint firstItem="A61-S7-Vjd" firstAttribute="trailing" secondItem="Fwk-Cp-9xg" secondAttribute="trailing" id="p4L-Ng-UU4"/>
+                            <constraint firstItem="B9b-v0-hhz" firstAttribute="centerY" secondItem="A61-S7-Vjd" secondAttribute="centerY" id="rNa-4t-4xe"/>
                             <constraint firstItem="7P1-mq-LWC" firstAttribute="leading" secondItem="jab-dc-yL1" secondAttribute="leading" id="uax-wp-gZu"/>
                             <constraint firstItem="Z8x-qg-IqL" firstAttribute="centerY" secondItem="bMp-Un-coF" secondAttribute="centerY" id="xbH-UN-pcI"/>
                             <constraint firstItem="jab-dc-yL1" firstAttribute="leading" secondItem="A61-S7-Vjd" secondAttribute="leading" constant="16" id="zGN-zf-n1G"/>
@@ -203,6 +208,11 @@
                         <viewLayoutGuide key="safeArea" id="A61-S7-Vjd"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="B9b-v0-hhz" id="eXF-yh-eud"/>
+                        <outlet property="bonus1Button" destination="bMp-Un-coF" id="aWu-DP-RJ5"/>
+                        <outlet property="bonus2Button" destination="iFp-Kj-Dh4" id="SF5-X1-OxG"/>
+                        <outlet property="bonus3Button" destination="nwn-S0-bu9" id="os6-ka-NYN"/>
+                        <outlet property="bonus4Button" destination="Z8x-qg-IqL" id="qKe-u5-Ush"/>
                         <outlet property="option1Button" destination="jab-dc-yL1" id="32e-D2-iEv"/>
                         <outlet property="option2Button" destination="4sN-TN-CnT" id="yo1-59-6cB"/>
                         <outlet property="option3Button" destination="7P1-mq-LWC" id="hPb-l6-ct4"/>
