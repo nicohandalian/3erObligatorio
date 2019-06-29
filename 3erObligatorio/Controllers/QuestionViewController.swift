@@ -165,7 +165,7 @@ class QuestionViewController: UIViewController{
     }
     
     func winnerAlert(){
-        let winnerAlert = UIAlertController(title: "Congratulations!!", message: "Do you want to leave with \(LevelsManager.shared.actualLevel().rawValue) or keep going for \(LevelsManager.shared.nextLevel().rawValue)", preferredStyle: .alert)
+        let winnerAlert = UIAlertController(title: "Congratulations!!", message: "Do you want to leave with \(LevelsManager.shared.actualLevel().rawValue) or keep going for \(LevelsManager.shared.nextLevel().rawValue)?", preferredStyle: .alert)
         winnerAlert.addAction(UIAlertAction(title: "Leave :(", style: .default, handler: self.indexHandler))
         winnerAlert.addAction(UIAlertAction(title: "Continue :)", style: .default, handler: self.nextQuestionHandler))
         self.present(winnerAlert, animated: true, completion: nil)
