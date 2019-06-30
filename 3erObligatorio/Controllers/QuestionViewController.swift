@@ -35,7 +35,11 @@ class QuestionViewController: UIViewController{
     override func viewDidLoad() {
         alterLayout()
         fetchQuestion()
+        MusicManager.shared.startBackgroundMusic()
         
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        MusicManager.shared.stopBackgroundMusic()
     }
     
     func alterLayout(){
@@ -248,6 +252,7 @@ class QuestionViewController: UIViewController{
     func indexHandler(alert: UIAlertAction!){
         LevelsManager.shared.newGame()
         BonusManager.shared.newGame()
+        MusicManager.shared.stopBackgroundMusic()
         navigationController?.popViewController(animated: true)
     }
     
