@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-dw-4b7">
-                                <rect key="frame" x="150" y="145.5" width="75" height="75"/>
+                                <rect key="frame" x="40" y="126.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="height" multiplier="1:1" id="Bh8-wY-LFR"/>
                                 </constraints>
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-rI-FpL">
-                                <rect key="frame" x="150" y="291.5" width="75" height="75"/>
+                                <rect key="frame" x="40" y="492" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Q2p-rI-FpL" secondAttribute="height" multiplier="1:1" id="ixA-Dp-gQu"/>
                                 </constraints>
@@ -145,7 +145,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNW-H3-zqh">
-                                <rect key="frame" x="150" y="364.5" width="75" height="75"/>
+                                <rect key="frame" x="222.5" y="126.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MNW-H3-zqh" secondAttribute="height" multiplier="1:1" id="DZv-kf-QIC"/>
                                 </constraints>
@@ -159,7 +159,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD8-yK-Vjt">
-                                <rect key="frame" x="150" y="437.5" width="75" height="75"/>
+                                <rect key="frame" x="222.5" y="309.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fD8-yK-Vjt" secondAttribute="height" multiplier="1:1" id="rN0-Vx-Nr9"/>
                                 </constraints>
@@ -173,7 +173,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwI-FA-mZL">
-                                <rect key="frame" x="150" y="511" width="75" height="75"/>
+                                <rect key="frame" x="222.5" y="492" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KwI-FA-mZL" secondAttribute="height" multiplier="1:1" id="56O-Ok-Ws2"/>
                                 </constraints>
@@ -187,7 +187,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpI-TT-fpp">
-                                <rect key="frame" x="150" y="218.5" width="75" height="75"/>
+                                <rect key="frame" x="40" y="309.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VpI-TT-fpp" secondAttribute="height" multiplier="1:1" id="FrW-Va-rTW"/>
                                 </constraints>
@@ -202,24 +202,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hLI-dw-4b7" firstAttribute="width" secondItem="Dfy-dp-ykL" secondAttribute="width" multiplier="0.2" id="4yl-rj-UXh"/>
-                            <constraint firstItem="VpI-TT-fpp" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="5hI-ep-DGy"/>
-                            <constraint firstItem="VpI-TT-fpp" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.7" id="CVv-K9-10F"/>
+                            <constraint firstItem="hLI-dw-4b7" firstAttribute="width" secondItem="Dfy-dp-ykL" secondAttribute="width" multiplier="0.3" id="4yl-rj-UXh"/>
                             <constraint firstItem="KwI-FA-mZL" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="DBq-IY-Bta"/>
+                            <constraint firstItem="KwI-FA-mZL" firstAttribute="centerY" secondItem="Q2p-rI-FpL" secondAttribute="centerY" id="FrN-fc-WKw"/>
+                            <constraint firstItem="VpI-TT-fpp" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" id="GFO-OB-RXq"/>
+                            <constraint firstItem="hLI-dw-4b7" firstAttribute="leading" secondItem="2aO-bW-0Kx" secondAttribute="leading" constant="40" id="IYt-hw-0HO"/>
                             <constraint firstItem="Q2p-rI-FpL" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="PNd-fy-bsP"/>
-                            <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="S77-vd-9w4"/>
-                            <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.3" id="TdV-vM-58n"/>
-                            <constraint firstItem="Q2p-rI-FpL" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.9" id="US6-dE-rHz"/>
+                            <constraint firstItem="Q2p-rI-FpL" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.5" id="US6-dE-rHz"/>
                             <constraint firstItem="hLI-dw-4b7" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.5" id="W1s-rb-04L"/>
                             <constraint firstItem="VpI-TT-fpp" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="YDV-E6-CZ0"/>
-                            <constraint firstItem="hLI-dw-4b7" firstAttribute="centerX" secondItem="2aO-bW-0Kx" secondAttribute="centerX" id="Ylp-7h-b7U"/>
-                            <constraint firstItem="MNW-H3-zqh" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.1" id="bu1-yr-01W"/>
+                            <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerY" secondItem="VpI-TT-fpp" secondAttribute="centerY" id="ald-3V-ioQ"/>
                             <constraint firstItem="MNW-H3-zqh" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="cKV-90-5wa"/>
-                            <constraint firstItem="KwI-FA-mZL" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.5" id="gGy-VK-DDU"/>
+                            <constraint firstItem="MNW-H3-zqh" firstAttribute="centerY" secondItem="hLI-dw-4b7" secondAttribute="centerY" id="hbR-0v-wAU"/>
+                            <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerX" secondItem="MNW-H3-zqh" secondAttribute="centerX" id="kXa-6B-Qpv"/>
+                            <constraint firstItem="Q2p-rI-FpL" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="nrV-BJ-5pV"/>
                             <constraint firstItem="fD8-yK-Vjt" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="sU1-2i-4IZ"/>
-                            <constraint firstItem="KwI-FA-mZL" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="t9A-Ps-jma"/>
-                            <constraint firstItem="MNW-H3-zqh" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="tYq-UH-4xp"/>
-                            <constraint firstItem="Q2p-rI-FpL" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="yNr-rN-sfL"/>
+                            <constraint firstItem="VpI-TT-fpp" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="ubf-gK-Ipw"/>
+                            <constraint firstItem="2aO-bW-0Kx" firstAttribute="trailing" secondItem="MNW-H3-zqh" secondAttribute="trailing" constant="40" id="ymW-eJ-uGz"/>
+                            <constraint firstItem="KwI-FA-mZL" firstAttribute="centerX" secondItem="MNW-H3-zqh" secondAttribute="centerX" id="zEZ-pi-pw1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2aO-bW-0Kx"/>
                     </view>

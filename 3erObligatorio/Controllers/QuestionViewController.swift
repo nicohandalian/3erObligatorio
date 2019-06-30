@@ -221,7 +221,7 @@ class QuestionViewController: UIViewController{
     }
     
     func winnerAlert(){
-        let winnerAlert = UIAlertController(title: "Well done!!", message: "Do you want to leave with \(LevelsManager.shared.actualLevel().rawValue) or keep going for \(LevelsManager.shared.nextLevel().rawValue)?", preferredStyle: .alert)
+        let winnerAlert = UIAlertController(title: "Well done!!", message: "Do you want to leave with $\(LevelsManager.shared.actualLevel().rawValue) or keep going for $\(LevelsManager.shared.nextLevel().rawValue)?", preferredStyle: .alert)
         winnerAlert.addAction(UIAlertAction(title: "Leave :(", style: .default, handler: self.indexHandler))
         winnerAlert.addAction(UIAlertAction(title: "Continue :)", style: .default, handler: self.nextQuestionHandler))
         self.present(winnerAlert, animated: true, completion: nil)
@@ -237,13 +237,13 @@ class QuestionViewController: UIViewController{
     }
     
     func callSomeoneAlert(){
-        let callSomeoneAlert = UIAlertController(title: "Call Bonus", message: "Your aunt says: 'I'm sure the answer is \(options![correctOption!-1])'.", preferredStyle: .alert)
+        let callSomeoneAlert = UIAlertController(title: "Call Bonus", message: "Your aunt says: 'I'm sure the answer is \(options![correctOption!-1])'", preferredStyle: .alert)
         callSomeoneAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(callSomeoneAlert, animated: true, completion: nil)
     }
     
     func alreadyUsedBonus(){
-        let alreadyUsedBonus = UIAlertController(title: "Bonus already used in this turn", message: "You can't use two bonus in one turn", preferredStyle: .alert)
+        let alreadyUsedBonus = UIAlertController(title: "Bonus already used in this turn", message: "You can't use two bonus in one turn.", preferredStyle: .alert)
         alreadyUsedBonus.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alreadyUsedBonus, animated: true, completion: nil)
         
