@@ -8,5 +8,6 @@ target '3erObligatorio' do
   # Pods for 3erObligatorio
   pod "AlamofireObjectMapper", '5.2.0'
   pod "Kingfisher"
+  pod "lottie-ios"
 
 end
