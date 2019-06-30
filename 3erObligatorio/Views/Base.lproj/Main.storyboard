@@ -117,10 +117,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-dw-4b7">
-                                <rect key="frame" x="56.5" y="156.5" width="262.5" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="150" y="145.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="height" multiplier="1:1" id="Bh8-wY-LFR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Sports">
+                                <state key="normal" backgroundImage="icon-sports">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -128,23 +130,13 @@
                                     <segue destination="L4e-to-izf" kind="show" id="Dh8-0c-bUm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpI-TT-fpp">
-                                <rect key="frame" x="56.5" y="229.5" width="262.5" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Computers">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="computersCategorySelected:" destination="Ri6-8H-Rff" eventType="touchUpInside" id="4We-ZL-lQP"/>
-                                    <segue destination="L4e-to-izf" kind="show" id="n1i-U1-AlU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-rI-FpL">
-                                <rect key="frame" x="56.5" y="302.5" width="262.5" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="150" y="291.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q2p-rI-FpL" secondAttribute="height" multiplier="1:1" id="ixA-Dp-gQu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Mythology">
+                                <state key="normal" backgroundImage="icon-mythology">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -153,10 +145,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNW-H3-zqh">
-                                <rect key="frame" x="56.5" y="375.5" width="262.5" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="150" y="364.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MNW-H3-zqh" secondAttribute="height" multiplier="1:1" id="DZv-kf-QIC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Films">
+                                <state key="normal" backgroundImage="icon-films">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -165,10 +159,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD8-yK-Vjt">
-                                <rect key="frame" x="56.5" y="448.5" width="262.5" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="150" y="437.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fD8-yK-Vjt" secondAttribute="height" multiplier="1:1" id="rN0-Vx-Nr9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Maths">
+                                <state key="normal" backgroundImage="icon-maths">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -177,10 +173,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwI-FA-mZL">
-                                <rect key="frame" x="56.5" y="522" width="262.5" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="150" y="511" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KwI-FA-mZL" secondAttribute="height" multiplier="1:1" id="56O-Ok-Ws2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="General">
+                                <state key="normal" backgroundImage="icon-general">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -188,10 +186,23 @@
                                     <segue destination="L4e-to-izf" kind="show" id="l5H-uj-4Oa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpI-TT-fpp">
+                                <rect key="frame" x="150" y="218.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VpI-TT-fpp" secondAttribute="height" multiplier="1:1" id="FrW-Va-rTW"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="icon-computers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="computersCategorySelected:" destination="Ri6-8H-Rff" eventType="touchUpInside" id="4We-ZL-lQP"/>
+                                    <segue destination="L4e-to-izf" kind="show" id="n1i-U1-AlU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hLI-dw-4b7" firstAttribute="width" secondItem="Dfy-dp-ykL" secondAttribute="width" multiplier="0.7" id="4yl-rj-UXh"/>
+                            <constraint firstItem="hLI-dw-4b7" firstAttribute="width" secondItem="Dfy-dp-ykL" secondAttribute="width" multiplier="0.2" id="4yl-rj-UXh"/>
                             <constraint firstItem="VpI-TT-fpp" firstAttribute="centerX" secondItem="hLI-dw-4b7" secondAttribute="centerX" id="5hI-ep-DGy"/>
                             <constraint firstItem="VpI-TT-fpp" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.7" id="CVv-K9-10F"/>
                             <constraint firstItem="KwI-FA-mZL" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="DBq-IY-Bta"/>
@@ -432,10 +443,16 @@
     <resources>
         <image name="icon-call" width="30" height="30"/>
         <image name="icon-change" width="30" height="30"/>
+        <image name="icon-computers" width="20" height="20"/>
         <image name="icon-double" width="30" height="30"/>
+        <image name="icon-films" width="48" height="48"/>
+        <image name="icon-general" width="48" height="48"/>
+        <image name="icon-maths" width="20" height="20"/>
+        <image name="icon-mythology" width="24" height="24"/>
+        <image name="icon-sports" width="64" height="64"/>
         <image name="icon-two" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FH0-SZ-nee"/>
+        <segue reference="BQe-PI-WXT"/>
     </inferredMetricsTieBreakers>
 </document>
