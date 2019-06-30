@@ -6,13 +6,15 @@
 //  Copyright © 2019 Nicolás Handalian. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Lottie
 
 class QuestionViewController: UIViewController{
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var LevelLabel: UILabel!
+    @IBOutlet var animationView: AnimationView!
+    
     
     @IBOutlet weak var bonus1Button: UIButton!
     @IBOutlet weak var bonus2Button: UIButton!
@@ -33,6 +35,7 @@ class QuestionViewController: UIViewController{
     override func viewDidLoad() {
         alterLayout()
         fetchQuestion()
+        
     }
     
     func alterLayout(){
@@ -57,6 +60,7 @@ class QuestionViewController: UIViewController{
     }
     
     func fetchQuestion(){
+        stopAnimation()
         LevelLabel.text! = "$" + LevelsManager.shared.actualLevel().rawValue
         hideElementsInView()
         activityIndicator.startAnimating()
@@ -178,6 +182,31 @@ class QuestionViewController: UIViewController{
             
         }
         return [op1,op2,op3,op4]
+    }
+    
+    func startCelebrationAnimation(){
+        
+        animationView!.isHidden = false
+        let animation = Animation.named("4340-pew-pew")
+        animationView!.animation = animation
+        animationView!.loopMode = .loop
+        animationView!.play()
+        
+    }
+    
+    func startMoneyAnimation(){
+        
+        animationView!.isHidden = false
+        let animation = Animation.named("4028-coins-grow")
+        animationView!.animation = animation
+        animationView!.loopMode = .loop
+        animationView!.play()
+        
+    }
+    
+    func stopAnimation(){
+        animationView!.isHidden = true
+        animationView!.stop()
     }
     
     func loserAlert(){
@@ -350,9 +379,11 @@ class QuestionViewController: UIViewController{
         if(correctOption! == 1){
             doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                startMoneyAnimation()
                 millionaireAlert()
             }
             else{
+                startCelebrationAnimation()
                 winnerAlert()
                 LevelsManager.shared.progress()
             }
@@ -372,9 +403,11 @@ class QuestionViewController: UIViewController{
         if(correctOption! == 2){
             doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                startMoneyAnimation()
                 millionaireAlert()
             }
             else{
+                startCelebrationAnimation()
                 winnerAlert()
                 LevelsManager.shared.progress()
             }
@@ -394,9 +427,11 @@ class QuestionViewController: UIViewController{
         if(correctOption! == 3){
             doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                startMoneyAnimation()
                 millionaireAlert()
             }
             else{
+                startCelebrationAnimation()
                 winnerAlert()
                 LevelsManager.shared.progress()
             }
@@ -416,9 +451,11 @@ class QuestionViewController: UIViewController{
         if(correctOption! == 4){
             doubleAnswerBonus = false
             if(LevelsManager.shared.actualLevel()==TriviaLevels.eight){
+                startMoneyAnimation()
                 millionaireAlert()
             }
             else{
+                startCelebrationAnimation()
                 winnerAlert()
                 LevelsManager.shared.progress()
             }
