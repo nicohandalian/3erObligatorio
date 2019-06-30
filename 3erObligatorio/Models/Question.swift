@@ -14,9 +14,30 @@ class Question: Mappable {
     var questionCategory: QuestionCategory?
     var type: String?
     var questionDifficulty: QuestionDifficulty?
-    var question: String?
-    var correct_answer: String?
-    var incorrect_answers: [String]?
+    var questionString:String?
+    var question: String?{didSet{
+        let decodedData = Data(base64Encoded: question!)!
+        questionString = String(data: decodedData, encoding: .utf8)!
+        }
+        
+    }
+    var correctAnswerString:String?
+    var correct_answer: String?{
+        didSet{
+            let decodedData = Data(base64Encoded: correct_answer!)!
+            correctAnswerString = String(data: decodedData, encoding: .utf8)!
+        }
+    }
+    var incorrectAnswersString:[String] = []
+    var incorrect_answers: [String]?{
+        didSet{
+            for answer in incorrect_answers!{
+                let decodedData = Data(base64Encoded: answer)!
+                incorrectAnswersString.append(String(data: decodedData, encoding: .utf8)!)
+            }
+        }
+        
+    }
     
     var category: String?{
         didSet{

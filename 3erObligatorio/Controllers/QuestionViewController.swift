@@ -123,10 +123,10 @@ class QuestionViewController: UIViewController{
     }
     
     func updateView(){
-        questionTextView.text = question!.question
+        questionTextView.text = question!.questionString
         questionTextView.sizeToFit()
         
-        options = shuffleOptions(correct: question!.correct_answer!, incorrects: question!.incorrect_answers!)
+        options = shuffleOptions(correct: question!.correctAnswerString!, incorrects: question!.incorrectAnswersString)
         
         option1Button.setTitle(options![0], for:.normal)
         
@@ -140,41 +140,41 @@ class QuestionViewController: UIViewController{
     
     func shuffleOptions(correct:String, incorrects:[String])->[String]{
         let randomOptions = Int.random(in: 0...3)
-        var op1 = ""
-        var op2 = ""
-        var op3 = ""
-        var op4 = ""
+        var op1 = "A) "
+        var op2 = "B) "
+        var op3 = "C) "
+        var op4 = "D) "
         switch randomOptions {
             case 0:
                 correctOption = 1
-                op1 = correct + "."
-                op2 = incorrects[0]
-                op3 = incorrects[1]
-                op4 = incorrects[2]
+                op1 += correct + "."
+                op2 += incorrects[0]
+                op3 += incorrects[1]
+                op4 += incorrects[2]
             case 1:
                 correctOption = 2
-                op1 = incorrects[0]
-                op2 = correct + "."
-                op3 = incorrects[1]
-                op4 = incorrects[2]
+                op1 += incorrects[0]
+                op2 += correct + "."
+                op3 += incorrects[1]
+                op4 += incorrects[2]
             case 2:
                 correctOption = 3
-                op1 = incorrects[0]
-                op2 = incorrects[1]
-                op3 = correct + "."
-                op4 = incorrects[2]
+                op1 += incorrects[0]
+                op2 += incorrects[1]
+                op3 += correct + "."
+                op4 += incorrects[2]
             case 3:
                 correctOption = 4
-                op1 = incorrects[0]
-                op2 = incorrects[1]
-                op3 = incorrects[2]
-                op4 = correct + "."
+                op1 += incorrects[0]
+                op2 += incorrects[1]
+                op3 += incorrects[2]
+                op4 += correct + "."
             default:
                 correctOption = 4
-                op1 = incorrects[0]
-                op2 = incorrects[1]
-                op3 = incorrects[2]
-                op4 = correct + "."
+                op1 += incorrects[0]
+                op2 += incorrects[1]
+                op3 += incorrects[2]
+                op4 += correct + "."
             
         }
         return [op1,op2,op3,op4]
@@ -253,7 +253,22 @@ class QuestionViewController: UIViewController{
             bonus1Button.isEnabled = false
             bonus1Button.setBackgroundImage(UIImage(named: "icon-call-used"), for: .normal)
             callSomeoneAlert()
-            
+            switch(correctOption!){
+            case 1:
+                option1Button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+
+            case 2:
+                option2Button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+
+            case 3:
+                option3Button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+
+            case 4:
+                option4Button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+                
+            default:
+                option4Button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            }
         }
         else{
             alreadyUsedBonus()
