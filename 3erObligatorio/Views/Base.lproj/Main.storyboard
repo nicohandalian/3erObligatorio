@@ -186,6 +186,12 @@
                                     <segue destination="L4e-to-izf" kind="show" id="l5H-uj-4Oa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-h9-eqR">
+                                <rect key="frame" x="97.5" y="78" width="180" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpI-TT-fpp">
                                 <rect key="frame" x="40" y="309.5" width="112.5" height="112.5"/>
                                 <constraints>
@@ -206,12 +212,14 @@
                             <constraint firstItem="KwI-FA-mZL" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="DBq-IY-Bta"/>
                             <constraint firstItem="KwI-FA-mZL" firstAttribute="centerY" secondItem="Q2p-rI-FpL" secondAttribute="centerY" id="FrN-fc-WKw"/>
                             <constraint firstItem="VpI-TT-fpp" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" id="GFO-OB-RXq"/>
+                            <constraint firstItem="gKc-h9-eqR" firstAttribute="centerX" secondItem="2aO-bW-0Kx" secondAttribute="centerX" id="GRM-5A-wrP"/>
                             <constraint firstItem="hLI-dw-4b7" firstAttribute="leading" secondItem="2aO-bW-0Kx" secondAttribute="leading" constant="40" id="IYt-hw-0HO"/>
                             <constraint firstItem="Q2p-rI-FpL" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="PNd-fy-bsP"/>
                             <constraint firstItem="Q2p-rI-FpL" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="1.5" id="US6-dE-rHz"/>
                             <constraint firstItem="hLI-dw-4b7" firstAttribute="centerY" secondItem="2aO-bW-0Kx" secondAttribute="centerY" multiplier="0.5" id="W1s-rb-04L"/>
                             <constraint firstItem="VpI-TT-fpp" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="YDV-E6-CZ0"/>
                             <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerY" secondItem="VpI-TT-fpp" secondAttribute="centerY" id="ald-3V-ioQ"/>
+                            <constraint firstItem="gKc-h9-eqR" firstAttribute="top" secondItem="2aO-bW-0Kx" secondAttribute="top" constant="14" id="c9E-e3-S7p"/>
                             <constraint firstItem="MNW-H3-zqh" firstAttribute="width" secondItem="hLI-dw-4b7" secondAttribute="width" id="cKV-90-5wa"/>
                             <constraint firstItem="MNW-H3-zqh" firstAttribute="centerY" secondItem="hLI-dw-4b7" secondAttribute="centerY" id="hbR-0v-wAU"/>
                             <constraint firstItem="fD8-yK-Vjt" firstAttribute="centerX" secondItem="MNW-H3-zqh" secondAttribute="centerX" id="kXa-6B-Qpv"/>

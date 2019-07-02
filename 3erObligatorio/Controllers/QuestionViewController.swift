@@ -155,34 +155,34 @@ class QuestionViewController: UIViewController{
         switch randomOptions {
             case 0:
                 correctOption = 1
-                op1 += correct + "."
+                op1 += correct 
                 op2 += incorrects[0]
                 op3 += incorrects[1]
                 op4 += incorrects[2]
             case 1:
                 correctOption = 2
                 op1 += incorrects[0]
-                op2 += correct + "."
+                op2 += correct
                 op3 += incorrects[1]
                 op4 += incorrects[2]
             case 2:
                 correctOption = 3
                 op1 += incorrects[0]
                 op2 += incorrects[1]
-                op3 += correct + "."
+                op3 += correct
                 op4 += incorrects[2]
             case 3:
                 correctOption = 4
                 op1 += incorrects[0]
                 op2 += incorrects[1]
                 op3 += incorrects[2]
-                op4 += correct + "."
+                op4 += correct
             default:
                 correctOption = 4
                 op1 += incorrects[0]
                 op2 += incorrects[1]
                 op3 += incorrects[2]
-                op4 += correct + "."
+                op4 += correct
             
         }
         return [op1,op2,op3,op4]
